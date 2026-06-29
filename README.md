@@ -1,4 +1,4 @@
-# 🩸 Health Analyzer — App AI per la lettura delle analisi del sangue
+# 🩸 Health Analyzer — App AI per la lettura delle analisi di laboratorio
 
 > **Case study** di un progetto personale. Il codice è privato: questo repository ne descrive **idea, architettura e funzionalità**.
 
@@ -11,7 +11,7 @@
 
 ## L'idea
 
-Leggere i referti delle analisi del sangue (PDF o foto), capire quali valori sono **dentro o fuori dal range** di riferimento, archiviarli e **seguirne l'andamento nel tempo** — direttamente dal telefono, in modo privato.
+Leggere i referti delle analisi di laboratorio (**sangue, urine, feci**), capire quali valori sono **dentro o fuori dal range** di riferimento, archiviarli e **seguirne l'andamento nel tempo** — direttamente dal telefono, in modo privato.
 
 ## Architettura a "due cervelli"
 
@@ -25,7 +25,8 @@ Questa separazione tiene il sistema affidabile (i numeri non li "inventa" l'AI) 
 ## Cosa fa
 
 - Legge referti in **PDF o foto** ed estrae nome, valore, unità e range
-- Valuta i valori (nel range / sotto / sopra) e classifica anche i risultati **non numerici** (es. "nitriti presenti")
+- Divide gli esami per **materiale**: sangue, urine, feci
+- Valuta i valori (nel range / sotto / sopra) e classifica anche i risultati **non numerici** (es. "nitriti presenti", "urina opaca")
 - **Stato attuale** a colpo d'occhio + **storia nel tempo** con variazioni e andamenti
 - **Indici derivati** (NLR, eGFR, BUN/Creatinina…) con formule verificate, stato e fonti
 - Commenti educativi automatici, glossario con fonti, profili multipli, temi chiaro/scuro
